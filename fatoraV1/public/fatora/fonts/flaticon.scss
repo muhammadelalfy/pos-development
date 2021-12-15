@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?70e01414657a72cb3d35811da4a3fb87") format("truetype"),
+url("./flaticon.woff?70e01414657a72cb3d35811da4a3fb87") format("woff"),
+url("./flaticon.woff2?70e01414657a72cb3d35811da4a3fb87") format("woff2"),
+url("./flaticon.eot?70e01414657a72cb3d35811da4a3fb87#iefix") format("embedded-opentype"),
+url("./flaticon.svg?70e01414657a72cb3d35811da4a3fb87#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "user": "\f101",
+    "heart": "\f102",
+    "bag": "\f103",
+    "shopping-cart": "\f104",
+);
+
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-heart:before {
+    content: map-get($flaticon-map, "heart");
+}
+.flaticon-bag:before {
+    content: map-get($flaticon-map, "bag");
+}
+.flaticon-shopping-cart:before {
+    content: map-get($flaticon-map, "shopping-cart");
+}
